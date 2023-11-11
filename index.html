@@ -66,13 +66,15 @@
             </div>
             <div id="booking" class="col-12 col-sm-12 col-md-5 col-lg-5" style="text-align: center;background: var(--bs-gray-100);border-style: solid;border-color: var(--bs-yellow);padding: 20px 10px;">
                 <h2 class="text-center" style="font-family: 'Abyssinica SIL', serif;">Book Your Puja Today</h2>
-                <form action="https://formsubmit.co/jiteshsandil@gmail.com" method="POST" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;">
+                <form name="booking-form" action="https://mux.digivibe.in/process.php" method="post" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;">
                     <input class="placeholder bg-light border-warning form-control" type="text" placeholder="Your Name" name="name" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;" required>
                     <input class="placeholder bg-light border-warning form-control" type="email" placeholder="Your Email" name="email" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;" required>
                     <input class="placeholder bg-light border-warning form-control" type="tel" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;" placeholder="Phone Number" name="phone"  maxlength="10" minlength="10" required>
-                    <input type="hidden" name="_subject" value="New Booking submission!">
+                    <!--<input type="hidden" name="_subject" value="New Booking submission!">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://siddhivinayakpuja.com/#thanks">
+                    <input type="hidden" name="_next" value="https://siddhivinayakpuja.com/#thanks">-->
+                    <input type="hidden" name="form_tools_initialize_form" value="1" />
+                    <input type="hidden" name="form_tools_form_id" value="1" />
                     <button class="btn btn-warning text-center" type="submit" style="width: 100%;margin-top: 5px;margin-bottom: 5px;"><strong>Book Now</strong></button>
                 </form>
                     <!-- Bootstrap Alert -->
