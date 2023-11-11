@@ -16,12 +16,14 @@
             font-size: 35px;
             padding: 20px 0px;
         }
-        /* Optional: Add some custom styles for the alert */
-        #thanksAlert{
-            display: none;
-            margin-top: 20px;
-        }
     </style>
+    <style>
+        /* Optional: Add some custom styles for the alert */
+        #thanksAlert {
+          display: none;
+          margin-top: 20px;
+        }
+      </style>
 </head>
 
 <body>
@@ -70,7 +72,8 @@
                     <input class="placeholder bg-light border-warning form-control" type="tel" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;" placeholder="Phone Number" name="phone" required maxlength="10" minlength="10">
                     <input type="hidden" name="_subject" value="New Booking submission!">
                     <input type="hidden" name="_captcha" value="false">
-                    <button class="btn btn-warning text-center" type="submit" style="width: 100%;margin-top: 5px;margin-bottom: 5px;"><strong>Book Now</strong></button></form>
+                    <button class="btn btn-warning text-center" type="submit" style="width: 100%;margin-top: 5px;margin-bottom: 5px;"><strong>Book Now</strong></button>
+                </form>
                     <!-- Bootstrap Alert -->
                     <div class="alert alert-success" id="thanksAlert" role="alert">
                         Thank you for Booking!
@@ -176,6 +179,7 @@
           document.getElementById('thanksAlert').style.display = 'block';
         }
       </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
