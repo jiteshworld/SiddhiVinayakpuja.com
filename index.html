@@ -16,6 +16,11 @@
             font-size: 35px;
             padding: 20px 0px;
         }
+        /* Optional: Add some custom styles for the alert */
+        #thanksAlert{
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -63,7 +68,13 @@
                     <input class="placeholder bg-light border-warning form-control" type="text" required placeholder="Your Name" name="name" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;">
                     <input class="placeholder bg-light border-warning form-control" type="email" placeholder="Your Email" name="email" required style="margin: 0px;margin-top: 5px;margin-bottom: 5px;">
                     <input class="placeholder bg-light border-warning form-control" type="tel" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;" placeholder="Phone Number" name="phone" required maxlength="10" minlength="10">
+                    <input type="hidden" name="_subject" value="New Booking submission!">
+                    <input type="hidden" name="_captcha" value="false">
                     <button class="btn btn-warning text-center" type="submit" style="width: 100%;margin-top: 5px;margin-bottom: 5px;"><strong>Book Now</strong></button></form>
+                    <!-- Bootstrap Alert -->
+                    <div class="alert alert-success" id="thanksAlert" role="alert">
+                        Thank you for Booking!
+                    </div>
             </div>
         </div>
     </div>
@@ -158,6 +169,13 @@
             <p class="text-muted mb-0">Copyright © 2023&nbsp;SiddhiVinayakpuja.com</p>
         </div>
     </footer>
+    <script>
+        // Check if the URL contains '#thanks'
+        if (window.location.href.indexOf('#thanks') > -1) {
+          // Show the alert if the condition is met
+          document.getElementById('thanksAlert').style.display = 'block';
+        }
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
